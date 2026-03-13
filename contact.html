@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Providelabs Corporation</title>
+  <meta name="description" content="Contact Providelabs Corporation for proposals and inquiries." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    input, textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      font:inherit;
+    }
+    textarea{min-height:140px;resize:vertical}
+    label{font-weight:800;font-size:13px;color:var(--navy)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:900px){.form-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Providelabs home">
+          <img src="assets/images/header.png" alt="Providelabs logo" />
+        </a>
+
+        <div class="nav-links" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="index.html#achievements">Achievements</a>
+          <a href="index.html#process">Process</a>
+          <a href="contact.html" class="btn btn-primary">Contact</a>
+        </div>
+
+        <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" data-mobile-menu>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#achievements">Achievements</a>
+        <a href="index.html#process">Process</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:40px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p>Tell us what you’re building. We’ll respond with next steps and a tailored proposal outline.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card" style="background:var(--navy);color:var(--white)">
+            <div class="accent" style="background:var(--teal)"></div>
+            <h3 style="color:var(--white)">Providelabs Corporation</h3>
+            <p style="color:rgba(255,255,255,.85)">
+              Building C, Brgy. Mudoc, Fuga Island, 3515 Aparri, Cagayan, Philippines
+            </p>
+            <p style="color:rgba(255,255,255,.9);margin-top:12px">
+              <strong>Email:</strong> <a href="mailto:luke.deleon@providelabscorp.com" style="text-decoration:underline">luke.deleon@providelabscorp.com</a><br />
+              <strong>Phone:</strong> <a href="tel:+639166220701" style="text-decoration:underline">+63 916 622 0701</a><br />
+              <strong>Website:</strong> <a href="https://www.providelabscorp.com" style="text-decoration:underline">providelabscorp.com</a>
+            </p>
+            <p style="color:rgba(255,255,255,.75);margin-top:14px;font-size:13px">
+              Prefer email? Use the form and we’ll generate a ready-to-send message.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="accent"></div>
+            <h3>Inquiry form</h3>
+            <p style="color:var(--gray)">This form opens your email client with a pre-filled message (no server required).</p>
+
+            <form id="contactForm" style="margin-top:14px;display:grid;gap:12px">
+              <div class="form-row">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="company">Company</label>
+                  <input id="company" name="company" placeholder="Company / organization" />
+                </div>
+                <div>
+                  <label for="service">Service of interest</label>
+                  <input id="service" name="service" placeholder="e.g., Web design, Software, Construction" />
+                </div>
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Share your scope, timeline, and any links or references." required></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Compose email</button>
+              <small style="color:var(--gray)">Tip: include target launch date, location (if construction), and any existing documents.</small>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>Providelabs Corporation</strong><br />
+          <small>Building C, Brgy. Mudoc, Fuga Island, 3515 Aparri, Cagayan, Philippines</small>
+        </div>
+        <div>
+          <small>
+            <a href="mailto:luke.deleon@providelabscorp.com">luke.deleon@providelabscorp.com</a> •
+            <a href="tel:+639166220701">+63 916 622 0701</a>
+          </small>
+        </div>
+        <div>
+          <small>Copyright © <span id="year"></span> Providelabs Corporation. All Rights Reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const service = document.getElementById('service').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent(`Service inquiry: ${service || 'Providelabs engagement'}`);
+      const body = encodeURIComponent(
+        `Hello Providelabs Team,\n\n` +
+        `My name is ${name}${company ? ' from ' + company : ''}.\n` +
+        `Email: ${email}\n` +
+        `Service of interest: ${service || 'N/A'}\n\n` +
+        `Details:\n${message}\n\n` +
+        `Thank you,\n${name}`
+      );
+
+      window.location.href = `mailto:luke.deleon@providelabscorp.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

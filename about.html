@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Providelabs Corporation</title>
+  <meta name="description" content="Learn about Providelabs Corporation—established in 2019 and based in the Cagayan Special Economic Zone & Freeport." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="topbar"></div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Providelabs home">
+          <img src="assets/images/header.png" alt="Providelabs logo" />
+        </a>
+
+        <div class="nav-links" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="index.html#achievements">Achievements</a>
+          <a href="index.html#process">Process</a>
+          <a href="contact.html" class="btn btn-primary">Contact</a>
+        </div>
+
+        <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" data-mobile-menu>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#achievements">Achievements</a>
+        <a href="index.html#process">Process</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:40px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>About Providelabs</h2>
+            <p>
+              Established in 2019, Providelabs Corporation is a privately-held company that began in general construction and expanded
+              into finance and management consultancy—now delivering technology solutions through platform creation.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="accent"></div>
+            <h3>Our story</h3>
+            <p>
+              Providelabs was founded in 2019 and built its foundation in general construction. During the pandemic, the company
+              expanded into management consulting—supporting clients with practical planning, documentation coordination, and execution.
+              In 2023, the company introduced platform creation capabilities to support modern digital operations.
+            </p>
+          </div>
+          <div class="media" style="box-shadow:var(--shadow)">
+            <img src="assets/images/sigma3.jpg" alt="Providelabs at an industry event" />
+            <div class="cap">Based in Fuga Island (CSEZFP) — supporting local and international clients</div>
+          </div>
+        </div>
+
+        <div class="section" style="padding-bottom:0">
+          <div class="section-head">
+            <div>
+              <h2>Mission, vision, and values</h2>
+              <p>How we work—what we protect in every project and engagement.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="card">
+              <div class="accent"></div>
+              <h3>Mission</h3>
+              <p>To provide our clients with valued business solutions using competence and expertise in design, construction, and management components.</p>
+            </div>
+            <div class="card">
+              <div class="accent"></div>
+              <h3>Vision</h3>
+              <p>To surpass our clients’ expectations in quality and cost through continuous improvement.</p>
+            </div>
+            <div class="card">
+              <div class="accent"></div>
+              <h3>Values</h3>
+              <p>
+                <strong>Timeliness</strong> — meeting deadlines without rushing quality.<br />
+                <strong>Creativity</strong> — clients can pitch ideas; we work to make them possible.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" style="padding-bottom:0">
+          <div class="cta">
+            <div>
+              <h2 style="margin:0">Looking for a partner in the Philippines?</h2>
+              <p>Tell us your goals—we’ll advise, build, and deliver with clear coordination.</p>
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="contact.html">Contact us</a>
+              <a class="btn btn-outline" href="services.html">View services</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>Providelabs Corporation</strong><br />
+          <small>Building C, Brgy. Mudoc, Fuga Island, 3515 Aparri, Cagayan, Philippines</small>
+        </div>
+        <div>
+          <small>
+            <a href="mailto:luke.deleon@providelabscorp.com">luke.deleon@providelabscorp.com</a> •
+            <a href="tel:+639166220701">+63 916 622 0701</a>
+          </small>
+        </div>
+        <div>
+          <small>Copyright © <span id="year"></span> Providelabs Corporation. All Rights Reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
