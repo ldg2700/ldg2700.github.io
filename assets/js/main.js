@@ -1,80 +1,52 @@
 'use strict';
-
-document.documentElement.classList.add('js');
-
-// The menu remains visible on small screens if JavaScript is unavailable.
-const menuButton = document.querySelector('[data-menu-toggle]');
-const menu = document.querySelector('[data-menu]');
-if (menuButton && menu) {
-  const setMenu = (open, restoreFocus = false) => {
-    menu.classList.toggle('is-open', open);
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-    if (restoreFocus) menuButton.focus();
-  };
-  menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
-  menu.addEventListener('click', event => {
-    if (event.target.closest('a')) setMenu(false);
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') setMenu(false, true);
-  });
-  document.addEventListener('click', event => {
-    if (!event.target.closest('.nav')) setMenu(false);
-  });
-  window.matchMedia('(min-width: 951px)').addEventListener('change', () => setMenu(false));
-}
-
-document.querySelectorAll('[data-year]').forEach(node => { node.textContent = String(new Date().getFullYear()); });
-
-// This static site prepares a mailto draft. It does not send or store inquiries.
-const inquiry = document.querySelector('#project-brief');
-if (inquiry) {
-  const requestedService = new URLSearchParams(window.location.search).get('service');
-  const service = inquiry.elements.namedItem('service');
-  if (requestedService && Array.from(service.options).some(option => option.value === requestedService)) {
-    service.value = requestedService;
+(() => {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('site-nav');
+  if (toggle && nav) {
+    const close = () => { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); };
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open', !expanded);
+    });
+    nav.addEventListener('click', event => { if (event.target.closest('a')) close(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('is-open')) { close(); toggle.focus(); } });
+    const desktop = window.matchMedia('(min-width: 941px)');
+    desktop.addEventListener('change', () => { if (desktop.matches) close(); });
   }
-  const draftPanel = document.querySelector('#draft-panel');
-  const draftField = document.querySelector('#email-draft');
-  const draftLink = document.querySelector('#open-email-draft');
-  const copyButton = document.querySelector('#copy-draft');
-  const copyStatus = document.querySelector('#copy-status');
-
-  inquiry.addEventListener('submit', event => {
+  const form = document.getElementById('inquiry-form');
+  if (!form) return;
+  const select = document.getElementById('service-select');
+  const routeSearch = typeof window.__previewSearch === 'string' ? window.__previewSearch : window.location.search;
+  const requested = new URLSearchParams(routeSearch).get('service');
+  if (requested && Array.from(select.options).some(option => option.value === requested)) select.value = requested;
+  form.addEventListener('submit', event => {
     event.preventDefault();
-    if (!inquiry.reportValidity()) return;
-    const field = name => String(inquiry.elements.namedItem(name)?.value || '').trim();
-    const serviceLabel = service.options[service.selectedIndex].textContent;
-    const subject = `Project inquiry: ${serviceLabel}`;
-    const body = [
-      'Hello Providelabs,', '',
-      `My name is ${field('name')}${field('company') ? ` from ${field('company')}` : ''}.`,
-      `Email: ${field('email')}`,
-      `I am interested in: ${serviceLabel}`,
-      field('timeline') ? `Preferred timing: ${field('timeline')}` : '',
-      '', 'About the project:', field('message'), '', 'Thank you,', field('name')
-    ].filter(line => line !== null).join('\n');
-    const mailto = `mailto:contact@providelabscorp.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    draftField.value = `To: contact@providelabscorp.com\nSubject: ${subject}\n\n${body}`;
-    draftLink.href = mailto;
-    draftPanel.hidden = false;
-    copyStatus.textContent = '';
-    // Preserve a visible copyable draft even if no mail application is configured.
-    draftPanel.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
-    draftPanel.focus({ preventScroll: true });
-    window.location.href = mailto;
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const clean = key => String(data.get(key) || '').trim();
+    if (!clean('name') || !clean('message')) { alert('Please enter your name and a short project description.'); return; }
+    const service = select.options[select.selectedIndex].text;
+    const subject = 'Providelabs inquiry - ' + service;
+    const body = 'Hello Providelabs,\n\nI would like to discuss ' + service.replace(/^[A-Z]/, c => c.toLowerCase()).replace(/^i\.T\./, 'I.T.') + '.\n\nName: ' + clean('name') + '\nEmail: ' + clean('email') + '\nCompany: ' + (clean('company') || 'Not specified') + '\n\nProject details:\n' + clean('message') + '\n\nThank you.';
+    const field = document.getElementById('draft-text');
+    field.value = 'To: contact@providelabscorp.com\nSubject: ' + subject + '\n\n' + body;
+    document.getElementById('draft-link').href = 'mailto:contact@providelabscorp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    const result = document.getElementById('draft-result');
+    result.hidden = false;
+    result.focus();
+    result.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'center'});
   });
-
-  copyButton.addEventListener('click', async () => {
+  document.getElementById('copy-draft').addEventListener('click', async () => {
+    const field = document.getElementById('draft-text');
+    const status = document.getElementById('copy-status');
     try {
-      if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
-      await navigator.clipboard.writeText(draftField.value);
-      copyStatus.textContent = 'Copied. Paste this into an email to contact@providelabscorp.com.';
-    } catch {
-      draftField.focus();
-      draftField.select();
-      copyStatus.textContent = 'Your draft is selected. Use Copy on your device, then paste it into your email.';
+      if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard not available');
+      await navigator.clipboard.writeText(field.value);
+      status.textContent = 'Draft copied. Paste it into your email app, review it and press Send there.';
+    } catch (error) {
+      field.focus(); field.select();
+      status.textContent = 'The draft is selected. Use Copy on your device, then paste it into your email app.';
     }
   });
-}
+})();

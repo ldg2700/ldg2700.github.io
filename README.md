@@ -1,87 +1,78 @@
-# Providelabs website
+# Providelabs corporate website - revised copy, November 2026
 
-A complete redesign of the supplied Providelabs website, ready to use as a static website. Website design is now a main service, alongside consultancy, software, IT infrastructure, and construction.
+A static website for Providelabs Corporation. The homepage leads with management and consultancy; website design is one service within I.T.. No build tools, package installation, backend or external fonts are required.
 
-## Review it
+## Files and pages
 
-Open `index.html` in a browser after extracting this folder. All pages, fonts, photos, the brochure, application forms, and the payment QR are included locally.
+- `index.html`: consultancy-first homepage and five service areas.
+- `services.html`: management and consultancy; fintech and gaming; regulatory coordination; I.T.; construction.
+- `technology.html`: hardware procurement/deployment, software white labeling, websites, networks, security and support.
+- `website-design.html`: website design as a supporting I.T. service; preserves the existing page address.
+- `experience.html`: generic technical systems and infrastructure experience, business engagement and construction background.
+- `about.html`: company story, history, recognition and one-paragraph leadership profiles.
+- `community.html`: dated community activities and industry engagement.
+- `contact.html`: email-draft inquiry form, contact details and original fillable application PDFs.
+- `payments.html`: the original QR Ph poster and payment instructions.
+- `website-notes.html`: inquiry and payment information, privacy and photo credits.
+- `404.html`: a helpful fallback page.
+- `assets/`: local images, one stylesheet and one JavaScript file.
+- `downloads/`: the updated brochure and the original blank application forms.
+- `CNAME`: `www.providelabscorp.com`, unchanged.
+- `.nojekyll`: an empty marker for static publishing.
 
-The separate `Providelabs-Website-Preview.html` deliverable is an all-in-one offline preview. Open it in a desktop browser to explore every page without extracting the website folder. Its top bar is for reviewing the site and is not included in the live website.
+## Review first
 
-For a local HTTP preview, run this from the extracted website folder if Python is installed:
+Open `index.html` from the extracted folder in a browser, or use the separate self-contained website preview. Check the wording, service scope and photographs before publishing. The preview is for review, not the file to upload as your website.
 
-```bash
-python3 -m http.server 8000
-```
+Providelabs Management Consultancy is introduced through its purpose: serving the growing needs of Providelabs' clientele. Keep the contracting and payment entity explicit in each proposal and invoice.
 
-Then visit `http://localhost:8000`.
+## Publish using the browser workflow that worked for your repository
 
-## Publish to the existing GitHub Pages site
+1. Keep a copy of the current website before updating it. Do not delete or recreate the repository.
+2. On GitHub.com, open `ldg2700/ldg2700.github.io`. Start from the latest `main` branch, not an old local clone with unpushed commits.
+3. Create a new review branch, for example `providelabs-copy-revision`.
+4. On that branch, select **Add file > Upload files**.
+5. Extract this ZIP. Open `providelabs-website` and upload its CONTENTS into the existing publishing folder. `index.html` must be at that folder's top level; do not add another enclosing folder.
+6. Preserve `CNAME`, the current Pages settings and any unrelated repository configuration. Include the supplied `.nojekyll` marker. On macOS, Command + Shift + . shows hidden files in Finder.
+7. Commit the upload to the review branch. Open a pull request into `main` and review the changed files. Confirm the brochure, photos, CSS, JavaScript and PDFs are included.
+8. Merge only after review. Check **Actions** for a successful Pages deployment, then test the live site on desktop and mobile.
+9. Do not force-push, reset existing history or change the custom domain to work around a deployment error. Inspect the actual error first.
 
-The supplied project was `ldg2700.github.io-main`, with `www.providelabscorp.com` in its CNAME file. The redesign preserves that domain file and the original main page addresses.
+Uploading replacement files does not remove old unused assets. Leave unrelated files alone; review any cleanup separately after the refreshed site is working. If your Pages source is not `main` / root, follow the existing configured source rather than changing it automatically.
 
-1. Keep a copy or a commit of the existing repository so you can return to it if needed.
-2. Put the **contents of this folder** in the existing repository's publishing folder. `index.html` should be at the publishing root, alongside `assets`, `downloads`, and `CNAME`; do not add another nested `providelabs-website` folder above them.
-3. Commit and push the changes to the branch already used by GitHub Pages. If the repository uses branch-based publishing, verify **Settings → Pages → Build and deployment → Deploy from a branch**, with the correct branch and folder. Keep the existing custom-domain setting `www.providelabscorp.com`.
-4. After deployment completes, open the site on desktop and on a phone. Check the navigation, inquiry draft, brochure download, client form downloads, and QR image saving. Confirm that the payment app displays the correct merchant before accepting real payments.
+Official GitHub publishing references:
+- https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
+- https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+- https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
-The project requires no package installation, build service, server application, or API key. There is no need to change a working domain/DNS setup just for this redesign.
+## Inquiry form
 
-The live repository and domain were not changed as part of preparing these files. The new brochure's links to `website-design.html` and `payments.html` become available online when these files are published.
+The form does not submit to a database or server. It prepares an email draft and provides an **Open email app** link and a copyable fallback. The visitor must review and send the message in their email app. No API keys, analytics trackers or third-party form service are included.
 
-Current GitHub documentation:
+## QR Ph payments
 
-- [Configuring a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-- [Managing a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-- [Troubleshooting custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages)
+The file `assets/images/providelabs-qr-ph.jpg` is byte-identical to the supplied original. Do not redraw, recolor or regenerate the QR. The website does not accept card data or automatically confirm payments. Clients should verify Providelabs Corporation, the invoice and the amount in their payment app.
 
-## What is included
+Use the QR only when the invoice or representative directs payment to Providelabs Corporation.
 
-| Page | Purpose |
-| --- | --- |
-| `index.html` | Main introduction, website design, other services, company story, process, brochure and payment links |
-| `website-design.html` | Dedicated website-design service, scope options, illustrative concepts, deliverables and questions |
-| `services.html` | Consultancy, software, white-label platforms, IT infrastructure, construction and design |
-| `about.html` | Company history, authentic portfolio photographs and specific FiNext 2024 recognition |
-| `contact.html` | Contact details, email brief composer, and the original fillable application forms |
-| `payments.html` | The original QR Ph asset, save/open links, payment instructions and reference-email link |
-| `website-notes.html` | Plain-language notes on inquiries, documents, payments and sample visuals |
-| `404.html` | Custom not-found page for the existing domain root |
+## Editing and maintenance
 
-Shared presentation is in `assets/css/style.css`. Navigation and the inquiry composer are in `assets/js/main.js`. All text can be edited directly in the HTML files. The font files and their licenses are in `assets/fonts`.
+Edit the HTML directly. The shared presentation rules are in `assets/css/style.css`; interaction code is in `assets/js/main.js`. Navigation and footer are repeated in the HTML pages, so apply shared changes consistently. Do not upload completed client forms, bank records, IDs, the raw staff CV or private correspondence.
 
-## Inquiry behavior
+## Release checks
 
-The inquiry form **prepares an email; it does not send it automatically**. Visitors must press Send in their email app. The site also exposes a copyable draft, a retry link, and a clipboard fallback. It does not claim that an inquiry was sent. Without JavaScript, the form uses a plain-text email action, and a direct email link is shown.
+Confirm the contact details, leadership roles and scope wording. Confirm publication permissions for the leadership portraits and any third-party event photographs. Existing credits are retained, but a photo credit is not itself a publication license. The 2024 meeting photo is credited to Ralph Paladio / Gavin Ventures Inc.; the 2026 event photo is credited to SiGMA World.
 
-The current public inquiry inbox is `contact@providelabscorp.com`, matching the supplied home, service and contact pages. The telephone number is `+63 916 622 0701`, from the supplied company introduction. The different older direct email was standardized to the public inbox.
+Scan the displayed QR in a banking or wallet app and verify the recipient before making a deliberate test payment. A real transaction was not performed during preparation.
 
-If you later want inquiries to arrive through a hosted form rather than the visitor's email app, connect a real form service or backend and update the visitor-facing explanation accordingly. No unconfigured form service is included.
+## Changes in this revision
 
-## QR Ph behavior
+- Generic technical project names replace named staff, organizations and employers.
+- Company name corrected to Providelabs Management Consultancy.
+- Company story explains the purpose of the consultancy, without repeated relationship labels.
+- Leadership profiles refreshed, with a broader industry-based director profile.
+- I.T. is used consistently for information technology.
+- Unnecessary editorial captions removed; actual photo credits retained.
+- The brochure included in downloads matches the revised PDF.
 
-`assets/images/providelabs-qr-ph.jpg` is byte-identical to the supplied payment image. The payment page frames the merchant-and-code region using CSS, while **Open original QR** and **Save QR image** provide the complete original file. The QR has not been redrawn, recolored or regenerated.
-
-The site does not initiate, verify, or reconcile transactions. The customer pays in a supported bank or wallet app, checks the recipient and agreed amount, and sends a reference to your team. No transaction was attempted during preparation.
-
-Original QR SHA-256:
-
-```text
-e13f58563ecaddda972353ece8c4919b995366cb0b8f167fca64e850df4ffdf5
-```
-
-## Brochure and forms
-
-The new eight-page brochure is in `downloads/Providelabs-Company-Brochure.pdf`. The separate editable brochure source package includes its authoring code, assets and font licenses.
-
-Both blank application forms remain the original interactive PDFs. They have not been flattened or combined. Visitors are directed to ask their Providelabs contact which form to use and how to return sensitive documents.
-
-## Verification and practical limits
-
-The package was checked for local links, anchors, assets, HTML page structure, JavaScript syntax, inquiry and navigation logic, image dimensions, font availability, and original QR/form integrity. The brochure was rendered and inspected on every page.
-
-A browser engine could not be installed in the authoring environment, so full browser screenshot, real-device, live-domain, email delivery, and payment-app tests remain to be performed. The responsive rules, menu behavior, keyboard focus, reduced-motion handling, and no-JavaScript fallbacks are implemented, but this is not a claim of a complete accessibility audit or live payment verification.
-
-## Content and image sources
-
-See `CONTENT-AND-CREDITS.md` for the source decisions, original imagery, concept labels and font notices.
+The live repository has not been changed by the preparation of this package. Upload the contents of this folder to a review branch using your established process.

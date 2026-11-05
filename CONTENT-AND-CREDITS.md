@@ -1,43 +1,29 @@
-# Content and credits
+# Providelabs content and photography
 
-## Company information
+## Editorial scope
 
-Company information is based on the uploaded Providelabs website, the company introduction and company profile, and the user's instruction to expand the website-design offering.
+The website introduces management and consultancy first, followed by fintech and gaming, regulatory coordination, I.T. services and construction. Website design is one part of the I.T. offering, alongside hardware procurement and deployment, software white labeling, systems, networks and technical support.
 
-- Founding in 2019, consultancy in 2020, and platform creation in 2023: Company Introduction 2024, pages 3–4.
-- Service areas: Company Introduction 2024, page 4, the company profile and existing website.
-- Address and primary inbox: existing contact page; the address is also present in the company profile.
-- Telephone: Company Introduction 2024, page 16.
-- Specific FiNext recognition: original `finext.jpg` image in the supplied website shows the Excellence in Financial Consulting Award presented to Providelabs Corporation, Dubai, 28–29 February 2024.
+Providelabs Management Consultancy is presented as having been created to serve the growing needs of Providelabs' clientele. The legal contracting and invoicing entity is defined in each engagement, not inferred from website marketing copy.
 
-The dated CEZA license reproduced in the introduction belongs to another named company. No current Providelabs licensing, lending, accreditation, or approval guarantee was inferred from it. The site makes no invented conversion, client-volume, revenue, turnaround, or website-performance claims.
+Technical work is described by system type and responsibility, without naming individual staff or their previous employers. The project categories are supported by the technical background supplied for this revision and the client's confirmation of contract involvement. Payment gateway integration is a scoped service, not a newly claimed completed case study.
 
-## Branding and photography
+Leadership profiles combine the requested company roles with supplied professional background. The director's profile describes experience across fintech, virtual currency, venture capital, I.T. operations, governance and executive support. His prior roles are not presented as projects delivered by Providelabs. No CV, personal contact details or professional references are included in this package.
 
-The transparent Providelabs wordmark and three-gear mark were extracted from the supplied company introduction. Original orange and turquoise are retained, with a darker orange for readable text, warm ivory backgrounds and charcoal type.
+The user supplied current leadership roles; historical employment dates in supporting materials are not reproduced as current tenure claims. No completed legal qualification or legal practice credential is implied.
 
-All photography comes from the supplied company materials:
+## Photo credits
 
-- `sigma3.jpg`: original company event photograph from the website archive.
-- `finext.jpg`: original FiNext award photograph from the website archive.
-- `cargo-haus-exterior.jpg` and `cargo-haus-interior.jpg`: photographs extracted from Company Profile page 16, identified in the source as Cargo Haus Warehouse, Clark, Pampanga.
-- `don-bosco-courtyard.jpg`: photograph extracted from Company Profile page 13, identified in the source as Don Bosco Academy, Bacolor, Pampanga.
+- Business discussion, June 2024 (`partner-meeting-2024.jpg`): Ralph Paladio / Gavin Ventures Inc.
+- SiGMA Asia 2026 (`sigma-asia-2026.jpg`): SiGMA World. The complete supplied photograph retains its original event marks.
+- Other company, leadership, construction and community images: supplied by Providelabs for this project.
 
-The construction photos are described as portfolio images; the new copy does not invent Providelabs' precise contractual scope on those projects. Third-party presentation-template artwork, certificates and outdated project-status claims were not reused.
+Credits do not replace permission to publish. Confirm permission for credited third-party photographs before publication.
 
-No externally sourced stock photography was used. The original supplied company photography gives the website and brochure a more specific, personal character.
+## Historical claims
 
-## Website design illustrations
+Founding and service chronology, the FiNext 2024 financial consulting award, construction projects, and dated community and industry activities are drawn from the supplied company materials and posts. Announced programs are not described as completed activities. Historic client-representation work is not a claim about current licensing status.
 
-The architecture illustration in `architecture-study.svg` and the illustrative FORM & FIELD / DAYBREAK layouts were newly created for this redesign. They are clearly labeled as design concepts, not actual client projects, endorsements, or case studies.
+## Payment and form integrity
 
-## Fonts
-
-- Caladea: Copyright (c) 2012 Huerta Tipográfica. Apache License, Version 2.0.
-- Carlito: Copyright (c) 2010–2013 tyPoland Lukasz Dziedzic, Reserved Font Name Carlito. SIL Open Font License, Version 1.1.
-
-The fonts are self-hosted, with no external font request. WOFF files are format conversions of the original bundled TTFs. The original license notices and full license texts are in `assets/fonts`.
-
-## Client documents and payment image
-
-The blank client application PDFs and the QR Ph JPEG are copies of the supplied originals. The forms retain their original fillable fields. The QR file retains its original pixel data and file bytes. Merchant and payment-provider artwork remain part of that supplied image.
+The payment poster and both blank application forms are unchanged. The website provides payment instructions, not automatic payment processing or confirmation. Inquiry forms prepare an email draft; they do not transmit it automatically.
