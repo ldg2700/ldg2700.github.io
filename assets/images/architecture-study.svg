@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <title>Original architectural illustration for a sample website</title>
+  <rect width="800" height="600" fill="#c8d3c7"/>
+  <circle cx="610" cy="136" r="86" fill="#e7b592"/>
+  <path d="M0 488 800 450V600H0Z" fill="#b8bcaa"/>
+  <path d="m290 441 312-23 198 114v68H573Z" fill="#959e8c"/>
+  <path d="M144 194 504 164 653 260 293 298Z" fill="#f9efe0"/>
+  <path d="m144 194 149 104v228L144 415Z" fill="#c1ae92"/>
+  <path d="m293 298 360-38v223l-360 43Z" fill="#eee3d0"/>
+  <path d="m135 181 371-31 157 102-370 40Z" fill="#f8f1e6"/>
+  <path d="m135 181 158 111v20L135 201Z" fill="#d4c1a6"/>
+  <path d="m293 292 370-40v20l-370 40Z" fill="#e1d0b4"/>
+  <path d="m337 346 98-11v180l-98 12Z" fill="#59665b"/>
+  <path d="m449 332 127-14v145l-127 15Z" fill="#516559"/>
+  <path d="m513 325v146M451 399l123-15" stroke="#d5c4a7" stroke-width="6"/>
+  <path d="m603 312 24-3v197l-24 3Z" fill="#c8b497"/>
+  <path d="m166 245 85 59v120l-85-62Z" fill="#667266"/>
+  <path d="m208 276v117M166 304l85 60" stroke="#c2af92" stroke-width="5"/>
+  <path d="m315 526 326-39 22 17-329 41Z" fill="#f4ebda"/>
+  <path d="m315 526 19 19v12l-19-14Z" fill="#d0bfa5"/>
+  <path d="m334 545 329-41v12l-329 41Z" fill="#c7b79d"/>
+  <path d="M91 480q5-119-9-217" stroke="#465548" stroke-width="9" fill="none"/>
+  <path d="M87 316Q2 257 12 182q77 22 75 134M87 300q-6-129 45-145 39 64-45 145M83 268Q30 179 56 125q56 32 27 143M88 352q9-84 79-87 1 58-79 87" fill="#637a60"/>
+  <path d="M724 516q-3-84 19-128" stroke="#465548" stroke-width="6" fill="none"/>
+  <path d="M729 466q-64-23-60-76 52 6 60 76M736 438q-7-76 40-92 20 54-40 92M727 492q26-53 73-44-5 47-73 44" fill="#657d61"/>
+  <path d="M24 538q61-29 119-9M659 561q62-25 115-13" stroke="#9da58e" stroke-width="4" fill="none"/>
+</svg>

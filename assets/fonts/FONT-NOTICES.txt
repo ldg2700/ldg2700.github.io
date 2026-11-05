@@ -1,0 +1,9 @@
+Caladea
+Copyright (c) 2012 Huerta Tipográfica.
+Licensed under Apache License 2.0 (Apache-2.0.txt).
+
+Carlito
+Copyright (c) 2010-2013 by tyPoland Lukasz Dziedzic with Reserved Font Name "Carlito".
+Licensed under SIL Open Font License 1.1 (OFL-1.1.txt).
+
+Fonts copied without modification from the LibreOffice distribution bundled with the authoring environment.
