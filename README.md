@@ -24,3 +24,5 @@ This is a simple, responsive static site template for Providelabs Corporation.
 
 The contact form composes an email to `luke.deleon@providelabscorp.com`.
 If you prefer a different inbox (e.g., `info@...`), update it in `contact.html`.
+
+website edit test
